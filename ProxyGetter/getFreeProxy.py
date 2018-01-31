@@ -44,9 +44,7 @@ class GetFreeProxy(object):
         :param page: 页数
         :return:
         """
-        url_list = ['http://www.data5u.com/',
-                    'http://www.data5u.com/free/',
-                    'http://www.data5u.com/free/gngn/index.shtml',
+        url_list = ['http://www.data5u.com/free/gngn/index.shtml',
                     'http://www.data5u.com/free/gnpt/index.shtml']
         for url in url_list:
             html_tree = getHtmlTree(url)
@@ -64,7 +62,7 @@ class GetFreeProxy(object):
         :param proxy_number: 代理数量
         :return:
         """
-        url = "http://www.66ip.cn/mo.php?sxb=&tqsl={}&port=&export=&ktip=&sxa=&submit=%CC%E1++%C8%A1&textarea=".format(
+        url = "http://www.66ip.cn/nmtq.php?getnum={}&isp=0&anonymoustype=0&start=&ports=&export=&ipaddress=&area=1&proxytype=2&api=66ip".format(
                 proxy_number)
         request = WebRequest()
         # html = request.get(url).content
@@ -167,9 +165,9 @@ if __name__ == '__main__':
     # for e in gg.freeProxyFirst():
     #     print(e)
     #
-    # for e in gg.freeProxySecond():
-    #     print(e)
-    #
+    for e in gg.freeProxySecond():
+        print(e)
+    
     # for e in gg.freeProxyThird():
         # print(e)
 
@@ -181,5 +179,5 @@ if __name__ == '__main__':
 
     # for e in gg.freeProxySixth():
     #     print(e)
-    for e in gg.freeProxySeventh():
-        print(e)
+    # for e in gg.freeProxySeventh():
+    #     print(e)
